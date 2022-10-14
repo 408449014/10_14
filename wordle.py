@@ -9,6 +9,10 @@ if __name__ == "__main__":
     answer = random.sample(dictionary, 1)[0]
     print(answer)
 
+    if not user_input in dictionary:
+        print("Please input an valid word")
+        exit()    
+    
     for i in range(len(user_input)):
         if user_input[i] == answer[i]:
             print("A")
