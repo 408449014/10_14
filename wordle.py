@@ -1,7 +1,13 @@
+import random
+
 if __name__ == "__main__":
     user_input = input()
 
-    answer = "apple"
+    f = open("words.txt", "r")
+    dictionary = f.read().splitlines()
+    f.close()
+    answer = random.sample(dictionary, 1)[0]
+    print(answer)
 
     for i in range(len(user_input)):
         if user_input[i] == answer[i]:
